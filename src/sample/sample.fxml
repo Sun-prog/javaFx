@@ -1,0 +1,57 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml" >
+            <top>
+                <BorderPane>
+                    <top>
+                        <Label text="Введите количество морковок"></Label>
+                    </top>
+                    <left>
+                        <TextField fx:id="carrot"/>
+                    </left>
+                    <center>
+                        <Button text="купить" onAction="#go"/>
+                    </center>
+                    <right>
+                        <Button text="Word" onAction="#word"/>
+                    </right>
+
+
+                </BorderPane>
+            </top>
+    <center>
+        <TableView fx:id="resultTable">
+            <columns>
+                <TableColumn text="рыба">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fish"/>
+                </cellValueFactory>
+                    </TableColumn>
+                <TableColumn text="морковки">
+                <cellValueFactory>
+                    <PropertyValueFactory property="carrot"/>
+                </cellValueFactory>
+            </TableColumn>
+                <TableColumn text="bulls">
+                <cellValueFactory>
+                    <PropertyValueFactory property="bulls"/>
+                </cellValueFactory>
+            </TableColumn>
+                <TableColumn text="cows">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="cows"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
